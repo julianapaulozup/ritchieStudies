@@ -1,0 +1,41 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Type your first number: ",
+      "name": "rit_input_number1",
+      "required": true,
+      "type": "text",      
+      "pattern": {
+        "regex": "[0-9]",
+        "mismatchText": "Only a integer value is allowed here (ex: 20)"
+  }
+    },
+    {
+      "label": "Type your second number: ",
+      "name": "rit_input_number2",
+      "required": true,
+      "type": "text",    
+      "pattern": {
+        "regex": "[0-9]",
+        "mismatchText": "Only a integer value is allowed here (ex: 20)"
+  }
+    },
+    {
+      "default": "sum",
+      "items": [
+        "sum",
+        "multiply",
+        "subtract",
+        "divide"
+      ],
+      "label": "What operation you want to do? ",
+      "name": "rit_input_op",
+      "required": false,
+      "type": "text"
+    }
+
+  ],
+  "template": "python3",
+  "templateRelease:": "2.16.0"
+}
